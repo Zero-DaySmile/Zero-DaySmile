@@ -1,0 +1,57 @@
+#include <stdio.h>
+
+// Function declarations
+void displayAbout();
+void displayProjects();
+void displayContact();
+
+int main() {
+    int choice;
+
+    while (1) {
+        // Display menu
+        printf("\n--- Zero-Day-Smile's Portfolio ---\n");
+        printf("1. About Me\n");
+        printf("2. Projects\n");
+        printf("3. Contact\n");
+        printf("4. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+
+        // Handle menu choice
+        switch (choice) {
+            case 1:
+                displayAbout();
+                break;
+            case 2:
+                displayProjects();
+                break;
+            case 3:
+                displayContact();
+                break;
+            case 4:
+                printf("Exiting...\n");
+                return 0;
+            default:
+                printf("Invalid choice. Please try again.\n");
+        }
+    }
+    return 0;
+}
+
+// Function definitions
+void displayAbout() {
+    printf("\n--- About Me ---\n");
+    printf("Hi, I'm Zero-Day-Smile. I'm passionate about coding and technology. Welcome to my portfolio!\n");
+}
+
+void displayProjects() {
+    printf("\n--- Projects ---\n");
+    printf("1. Project 1: Description of project 1.\n");
+    printf("2. Project 2: Description of project 2.\n");
+}
+
+void displayContact() {
+    printf("\n--- Contact ---\n");
+    printf("Email: zero-day-smile@example.com\n");
+}
